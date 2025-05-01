@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>23BCE5126</title>
+    </head>
+    <body>
+        <form oninput="x.value = (parseInt(a.value) + parseInt(b.value) + parseInt(c.value))/3">
+            <fieldset>
+                <Legend>Product Feedback</Legend>
+                Quality: 0<input type="range" name="a" id="a" min="0" max="10">10
+                <br><br>
+                Durability: 0<input type="range" name="b" id="b" min="0" max="10">10
+                <br><br>
+                Value-for-money: 0<input type="range" name="c" id="c" min="0" max="10">10
+            </fieldset>
+            <br>
+            Overall Rating: <output value="5" name="x" id="x" ></output>/10
+        </form>
+    </body>
+</html>
+

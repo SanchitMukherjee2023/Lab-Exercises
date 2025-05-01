@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>23BCE5126</title>
+</head>
+<body>
+    <h2>Order Receipt</h2>
+    <p><b>Name:</b> <span id="custName"></span></p>
+    <p><b>Phone:</b> <span id="custPhone"></span></p>
+    <p><b>Email:</b> <span id="custEmail"></span></p>
+    <h3>Ordered Items</h3>
+    <ul id="orderList"></ul>
+    <h3>Total Amount: $<span id="totalPrice">0</span></h3>
+    <script>
+        let params = new URLSearchParams(window.location.search);
+        document.getElementById("custName").innerText = params.get("name");
+        document.getElementById("custPhone").innerText = params.get("phone");
+        document.getElementById("custEmail").innerText = params.get("email");
+        let total = 0;
+        let orderList = document.getElementById("orderList");
+        params.getAll("product").forEach(item => {
+            let details = item.split("|");
+            let name = details[0];
+            let price = parseInt(details[1]);
+            let qty = params.get(`${name}_qty`);
+            if (qty > 0) {
+                let cost = price * qty;
+                total += cost;
+                orderList.innerHTML += `<li>${name}: ${qty} kg - $${cost}</li>`;
+            }
+        });
+        document.getElementById("totalPrice").innerText = total;
+    </script>
+
+</body>
+</html>

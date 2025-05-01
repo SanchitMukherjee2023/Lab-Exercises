@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>23BCE5126</title>
+</head>
+<body>
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>Temperature (°F)</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody id="temperatureTable">
+        </tbody>
+    </table>
+    <p>Hot Days: <span id="hotCount"></span></p>
+    <p>Pleasent Days:<span id="pleasantCount"></span></p>
+    <p>Cold Days: <span id="coldCount"></span></p>
+
+    <script>
+        let temperatures = [55,62,68,74,59,45,41,58,60,67,65,78,82,88,91,92,90,93,87,80,78,79,72,68,61,59,55,65];
+        let hotCount = 0;
+        let pleasantCount = 0;
+        let coldCount = 0;
+        let tableBody = document.getElementById("temperatureTable");
+        temperatures.forEach((temp, index) => {
+            let category;
+            if (temp >= 85) {
+                category = "Hot";
+                hotCount++;
+            } else if (temp >= 60 && temp <= 84) {
+                category = "Pleasent";
+                pleasantCount++;
+            } else {
+                category = "Cold";
+                coldCount++;
+            }
+            let row = '<tr><td>'+temp+'</td><td>'+category+'</td></tr>';
+            tableBody.innerHTML += row;
+        });
+        document.getElementById("hotCount").textContent = hotCount;
+        document.getElementById("pleasantCount").textContent = pleasantCount;
+        document.getElementById("coldCount").textContent = coldCount;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>23BCE5126</title>
+    </head>
+    <body>
+        <form style="width: 450px;">
+            <fieldset>
+                <legend><font color="red">Personal Details</font></legend>
+                <table cellpadding="5">
+                    <tr>
+                        <td>Name</td>
+                        <td>:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>:</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail id</td>
+                        <td>:</td>
+                        <td><input type="email"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>:</td>
+                        <td><input type="radio" name="gender"> Male
+                        <input type="radio" name="gender"> Female</td>
+                    </tr>
+                    <tr>
+                        <td>DOB</td>
+                        <td>:</td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <td>Mobile#</td>
+                        <td>:</td>
+                        <td><input type="tel"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend><font color="red">Educational Qualification</font></legend>
+                <br>
+                Degree :
+                <select name="Degree" id="Degree">
+                    <option value="Default">--Select Group--</option>
+                    <optgroup label="UG">
+                        <option value="BE">BE</option>
+                        <option value="BTech">BTech</option>
+                        <option value="BSc">BSc</option>
+                        <option value="BA">BA</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BBA">BBA</option>
+                        <option value="Others">Others</option>
+                    </optgroup>
+                    <optgroup label="PG">
+                        <option value="ME">ME</option>
+                        <option value="MTech">MTech</option>
+                        <option value="MSc">MSc</option>
+                        <option value="MA">MA</option>
+                        <option value="MCA">MCA</option>
+                        <option value="MBA">MBA</option>
+                        <option value="Others">Others</option>
+                    </optgroup>
+                    <optgroup label="PHD">
+                        <option value="Engineering">Engineering</option>
+                        <option value="Science">Science</option>
+                        <option value="Management">Management</option>
+                        <option value="Others">Others</option>
+                    </optgroup>
+                </select>
+    
+                <label for="Engineering">Engineering</label>
+                <select name="Engineering" id="Engineering">
+                    <option value="Default">--Select Group--</option>
+                    <option value="CSE">CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="CIVIL">CIVIL</option>
+                    <option value="MECH">MECH</option>
+                </select>
+            </fieldset>
+            <br>
+            Hobbies :
+            <input type="checkbox" name="hobbies"> Playing chess
+            <input type="checkbox" name="hobbies" id=""> Reading Books
+            <br><br>
+            Favourite Colour: <input type="color" name="" id="">
+            <br><br>
+            <font face="" color="red" size="4">Address</font>
+            <br><br>
+            <textarea name="" id="" rows="4" cols="60"></textarea>
+            <br><br>
+            Attach Resume: <input type="file" name="" id="">
+            <input type="submit" name="" id="">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>23BCE5126</title>
+</head>
+<body>
+    <button onclick="sortPatients()">Sort by Age</button>
+    <br><br>
+    <input type="number" id="searchPId">
+    <button onclick="checkPatientId()">Check P-Id</button>
+    <p id="searchResult"></p>
+    <input type="number" id="minAge" placeholder="Min Age">
+    <input type="number" id="maxAge" placeholder="Max Age">
+    <button onclick="filterByAge()">Filter</button>
+
+    <table id="patientTable" border="1">
+        <tr><th>P-Id</th><th>Name</th><th>Age</th></tr>
+    </table>
+
+    <script>
+        const patients = [
+            { PId: 1, Name: "Alen", Age: 39 },
+            { PId: 2, Name: "Deena", Age: 47 },
+            { PId: 3, Name: "Diana", Age: 21 },
+            { PId: 4, Name: "Jack", Age: 54 },
+            { PId: 5, Name: "Jain", Age: 23 },
+            { PId: 6, Name: "Kelvin", Age: 61 },
+            { PId: 7, Name: "Louis", Age: 69 },
+            { PId: 8, Name: "Rex", Age: 49 }
+        ];
+
+        function displayPatients(list) {
+            let table = document.getElementById("patientTable");
+            table.innerHTML = "<tr><th>P-Id</th><th>Name</th><th>Age</th></tr>";
+            list.forEach(p => {
+                table.innerHTML += '<tr><td>'+p.PId+'</td><td>'+p.Name+'</td><td>'+p.Age+'</td></tr>';
+            });
+        }
+
+        function sortPatients() {
+            displayPatients([...patients].sort((a, b) => b.Age - a.Age));
+        }
+
+        function checkPatientId() {
+            let id = parseInt(document.getElementById("searchPId").value);
+            document.getElementById("searchResult").innerText = patients.some(p => p.PId === id) ? "Found" : "Not Found";
+        }
+
+        function filterByAge() {
+            let min = parseInt(document.getElementById("minAge").value);
+            let max = parseInt(document.getElementById("maxAge").value);
+            displayPatients(patients.filter(p => p.Age >= min && p.Age <= max));
+        }
+
+        displayPatients(patients);
+    </script>
+</body>
+</html>

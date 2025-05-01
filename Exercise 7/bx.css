@@ -1,0 +1,11 @@
+div{
+    background-color: #0000ff;
+    color:antiquewhite;
+    width: 400px;
+    height: 100px;
+    padding: 20px;
+    border: 6px green solid;
+    outline: 20px solid;
+    outline-color: rgb(255,255,0);
+    margin: 25px;
+}

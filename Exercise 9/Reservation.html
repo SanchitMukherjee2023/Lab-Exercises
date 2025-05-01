@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>23BCE5126</title>
+</head>
+<body>
+    <button onclick="reserveSeat()">Reserve Seat</button>
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>Seat No.</th>
+                <th>Booked</th>
+            </tr>
+        </thead>
+        <tbody id="seatTable"></tbody>
+    </table>
+
+    <div class="boarding-pass" id="boardingPass" style="display:none; border: 1px solid black; width:200px">
+        <h3>Boarding Pass</h3>
+        <p><strong>Name:</strong> <span id="passengerName"></span></p>
+        <p><strong>Seat No:</strong> <span id="seatNumber"></span></p>
+        <p><strong>Class:</strong> <span id="seatClass"></span></p>
+    </div>
+
+    <script>
+        let seats = [0,0,0,0,0,0,0,0,0,0];
+
+        function updateSeatTable() {
+            let seatTable = document.getElementById("seatTable");
+            seatTable.innerHTML = "";
+
+            seats.forEach((seat, index) => {
+                let row = '<tr><td>' +(index + 1)+'</td><td>'+seat+'</td></tr>';
+                seatTable.innerHTML += row;
+            });
+        }
+
+        function reserveSeat() {
+            let name = prompt("Enter your name:");
+            let seatClass = parseInt(prompt("Enter 1 for First-Class (Seats 1-5) or 2 for Economy (Seats 6-10):"));
+            let assignedSeat=-1;
+
+            let start = seatClass === 1 ? 0 : 5;
+            let end = seatClass === 1 ? 5 : 10;
+
+            for (let i = start; i < end; i++) {
+                if (seats[i] === 0) {
+                    seats[i] = 1;
+                    assignedSeat = i + 1;
+                    break;
+                }
+            }
+
+            if (assignedSeat == -1) {
+                let otherSection = confirm('The '+(seatClass === 1 ? "First-Class" : "Economy")+' section is full. Would you like to be placed in the '+(seatClass === 1 ? "Economy" : "First-Class")+' section?');
+                if (otherSection) {
+                    let altStart = seatClass === 1 ? 5 : 0;
+                    let altEnd = seatClass === 1 ? 10 : 5;
+                    for (let i = altStart; i < altEnd; i++) {
+                        if (seats[i] === 0) {
+                            seats[i] = 1;
+                            assignedSeat = i + 1;
+                            seatClass = seatClass === 1 ? 2 : 1;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if (assignedSeat === -1) {
+                alert("The plane is full");
+                return;
+            }
+
+            document.getElementById("passengerName").textContent = name;
+            document.getElementById("seatNumber").textContent = assignedSeat;
+            document.getElementById("seatClass").textContent = seatClass === 1 ? "First-Class" : "Economy";
+            document.getElementById("boardingPass").style.display = "block";
+
+            updateSeatTable();
+        }
+
+        updateSeatTable();
+    </script>
+
+</body>
+</html>

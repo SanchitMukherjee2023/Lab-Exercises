@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>23BCE5126</title>
+</head>
+<body>
+    <h1 id="title">Original Title</h1>
+    <input type="text" name="username">
+    <p class="info">Info paragraph 1</p>
+    <p class="info">Info paragraph 2</p>
+    <p>Random paragraph 1</p>
+    <p>Random paragraph 2</p>
+    <p>Random paragraph 3</p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="checkbox" class="hobby"> Reading
+    <input type="checkbox" class="hobby"> Traveling
+    <input type="checkbox" class="hobby"> Gaming
+    <input type="text" class="input-field">
+    <input type="text" class="input-field">
+
+    <script>
+        document.getElementById("title").innerText = "Updated Title";
+        document.getElementsByName("username")[0].value = "John Doe";
+
+        let genderRadios = document.getElementsByName("gender");
+        for (let radio of genderRadios) {
+            if (radio.checked) {
+                console.log("Selected Gender:", radio.value);
+            }
+        }
+
+        let paragraphs = document.getElementsByTagName("p");
+        console.log("Total <p> elements:", paragraphs.length);
+
+        let listItems = document.getElementsByTagName("li");
+        for (let li of listItems) {
+            console.log("List Item:", li.textContent);
+        }
+
+        let inputFields = document.getElementsByClassName("input-field");
+        for (let field of inputFields) {
+            field.style.backgroundColor = "lightblue";
+        }
+
+        document.querySelector(".info").innerText = "This is the first info paragraph";
+        document.querySelector("input[name='gender']").checked = true;
+
+        let infoParagraphs = document.querySelectorAll(".info");
+        infoParagraphs.forEach(p => console.log("Info paragraph:", p.textContent));
+
+        let hobbyCheckboxes = document.querySelectorAll(".hobby");
+        hobbyCheckboxes.forEach(checkbox => {
+            checkbox.checked = true;
+            console.log("Checked Hobby:", checkbox.value);
+        });
+    </script>
+</body>
+</html>

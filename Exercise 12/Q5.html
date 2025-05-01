@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Z-Index Manipulation</title>
+  <style>
+    .container {
+      position: relative;
+      width: 500px;
+      height: 400px;
+      margin: 50px auto;
+      border: 2px solid #000;
+    }
+    .box {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      opacity: 0.8;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    #box1 {
+      background-color: red;
+      top: 50px;
+      left: 50px;
+      z-index: 1;
+    }
+    #box2 {
+      background-color: green;
+      top: 100px;
+      left: 100px;
+      z-index: 2;
+    }
+    #box3 {
+      background-color: blue;
+      top: 150px;
+      left: 150px;
+      z-index: 3;
+    }
+    .controls {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .control-group {
+      margin-bottom: 10px;
+    }
+    input[type="number"] {
+      width: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div id="box1" class="box">Box 1</div>
+  <div id="box2" class="box">Box 2</div>
+  <div id="box3" class="box">Box 3</div>
+</div>
+
+<div class="controls">
+  <div class="control-group">
+    Box 1 z-index: <span id="z1">1</span>
+    <input type="number" id="input1" min="0">
+    <button onclick="changeZ('box1', 'z1', 'input1')">Set</button>
+  </div>
+  <div class="control-group">
+    Box 2 z-index: <span id="z2">2</span>
+    <input type="number" id="input2" min="0">
+    <button onclick="changeZ('box2', 'z2', 'input2')">Set</button>
+  </div>
+  <div class="control-group">
+    Box 3 z-index: <span id="z3">3</span>
+    <input type="number" id="input3" min="0">
+    <button onclick="changeZ('box3', 'z3', 'input3')">Set</button>
+  </div>
+</div>
+
+<script>
+function changeZ(boxId, displayId, inputId) {
+  const val = document.getElementById(inputId).value;
+  document.getElementById(boxId).style.zIndex = val;
+  document.getElementById(displayId).textContent = val;
+}
+</script>
+
+</body>
+</html>

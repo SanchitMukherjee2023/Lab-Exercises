@@ -1,0 +1,31 @@
+h1{
+    background-image: linear-gradient(to left, violet,indigo,blue,green,yellow,orange,red);
+    background-clip: text;
+    color: transparent;
+    width:600px;
+    font-size: 50px;
+}
+
+body{
+    background-image: url("4.png");
+    align-items: center;
+}
+
+@keyframes moveball{
+    0%{transform: translate(0,0) rotate(0deg)}
+    100%{transform: translate(1000px,0) rotate(720deg)}
+}
+
+svg{overflow: visible}
+.circle{
+    animation: moveball 8s alternate-reverse infinite;
+}
+
+div{
+    line-height: 30pt;
+    column-count: 3;
+    column-rule-color: pink;
+    column-rule-width: 2px;
+    color: violet;
+    
+}
