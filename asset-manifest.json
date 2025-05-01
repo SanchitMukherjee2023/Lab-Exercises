@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/SanchitMukherjee2023.github.io/Lab-Exercises/Exercise-14/static/css/main.e6c13ad2.css",
-    "main.js": "/SanchitMukherjee2023.github.io/Lab-Exercises/Exercise-14/static/js/main.9df829b4.js",
-    "static/js/453.eeed298c.chunk.js": "/SanchitMukherjee2023.github.io/Lab-Exercises/Exercise-14/static/js/453.eeed298c.chunk.js",
-    "index.html": "/SanchitMukherjee2023.github.io/Lab-Exercises/Exercise-14/index.html",
-    "main.e6c13ad2.css.map": "/SanchitMukherjee2023.github.io/Lab-Exercises/Exercise-14/static/css/main.e6c13ad2.css.map",
-    "main.9df829b4.js.map": "/SanchitMukherjee2023.github.io/Lab-Exercises/Exercise-14/static/js/main.9df829b4.js.map",
-    "453.eeed298c.chunk.js.map": "/SanchitMukherjee2023.github.io/Lab-Exercises/Exercise-14/static/js/453.eeed298c.chunk.js.map"
+    "main.css": "/.github.io/Lab-Exercises/Exercise-13/static/css/main.e6c13ad2.css",
+    "main.js": "/.github.io/Lab-Exercises/Exercise-13/static/js/main.3197c6e5.js",
+    "static/js/453.eeed298c.chunk.js": "/.github.io/Lab-Exercises/Exercise-13/static/js/453.eeed298c.chunk.js",
+    "index.html": "/.github.io/Lab-Exercises/Exercise-13/index.html",
+    "main.e6c13ad2.css.map": "/.github.io/Lab-Exercises/Exercise-13/static/css/main.e6c13ad2.css.map",
+    "main.3197c6e5.js.map": "/.github.io/Lab-Exercises/Exercise-13/static/js/main.3197c6e5.js.map",
+    "453.eeed298c.chunk.js.map": "/.github.io/Lab-Exercises/Exercise-13/static/js/453.eeed298c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.9df829b4.js"
+    "static/js/main.3197c6e5.js"
   ]
 }
