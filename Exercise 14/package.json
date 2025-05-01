@@ -1,7 +1,7 @@
 {
   "name": "23bce5126",
   "version": "0.1.0",
-  "homepage": "https://github.com/SanchitMukherjee2023.github.io/Lab-Exercises/Exercise-14",
+  "homepage": "https://SanchitMukherjee2023.github.io/Lab-Exercises/Exercise-14",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",

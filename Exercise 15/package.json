@@ -2,7 +2,7 @@
   "name": "23bce5126",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/sanchitmukherjee2023.github.io/Lab-Exercises/Exercise-15",
+  "homepage": "https://sanchitmukherjee2023.github.io/Lab-Exercises/Exercise-15",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
